@@ -15,16 +15,16 @@ module.exports = {
 
   collectCoverageFrom: [
     "src/**/*.js",
-    "!src/index.js",   // entry-point boot file — not meaningful to cover
+    "!src/index.js", // entry-point boot file — not meaningful to cover
   ],
 
   // Integration tests touch every layer so 70%+ across the board is realistic
   coverageThreshold: {
     global: {
       statements: 70,
-      branches:   70,
-      functions:  70,
-      lines:      70,
+      branches: 70,
+      functions: 70,
+      lines: 70,
     },
   },
 };

@@ -15,17 +15,17 @@ module.exports = {
 
   // Only report coverage for files that unit tests actually import
   collectCoverageFrom: [
-    "src/middleware/**/*.js",  // validate.js         → exercised by validate.test.js
-    "src/models/**/*.js",      // userStore.js         → exercised by userStore.test.js
+    "src/middleware/**/*.js", // validate.js         → exercised by validate.test.js
+    "src/models/**/*.js", // userStore.js         → exercised by userStore.test.js
   ],
 
   // Thresholds apply only to the files listed above — all should be ~100%
   coverageThreshold: {
     global: {
       statements: 90,
-      branches:   85,
-      functions:  95,
-      lines:      90,
+      branches: 85,
+      functions: 95,
+      lines: 90,
     },
   },
 };
