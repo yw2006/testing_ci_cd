@@ -10,25 +10,17 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "jest --forceExit",
-    "test:unit": "jest --testPathPattern=tests/unit --coverage --forceExit",
-    "test:integration": "jest --testPathPattern=tests/integration --runInBand --forceExit",
+    "test:unit": "jest --config jest.unit.config.js --detectOpenHandles",
+    "test:integration": "jest --config jest.integration.config.js --forceExit --runInBand",
     "test:e2e": "playwright test"
   },
   "jest": {
     "testEnvironment": "node",
     "coverageDirectory": "coverage",
-    "collectCoverageFrom": [
-      "src/**/*.js",
-      "!src/index.js"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 70,
-        "functions": 70,
-        "lines": 70,
-        "statements": 70
-      }
-    }
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ]
   },
   "dependencies": {
     "express": "^4.19.2",
