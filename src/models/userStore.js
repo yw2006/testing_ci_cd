@@ -36,14 +36,18 @@ class UserStore {
 
   update(id, fields) {
     const user = this.findById(id);
-    if (!user) {return null};
+    if (!user) {
+      return null;
+    }
     const updated = { ...user, ...fields, updatedAt: new Date().toISOString() };
     this.users.set(id, updated);
     return updated;
   }
 
   delete(id) {
-    if (!this.users.has(id)) {return false};
+    if (!this.users.has(id)) {
+      return false;
+    }
     this.users.delete(id);
     return true;
   }

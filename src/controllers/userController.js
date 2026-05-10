@@ -67,8 +67,8 @@ function patch(req, res) {
   const fields = {};
 
   if (name !== undefined) {
-    fields.name = name.trim()
-  };
+    fields.name = name.trim();
+  }
   if (email !== undefined) {
     const byEmail = store.findByEmail(email);
     if (byEmail && byEmail.id !== req.params.id) {
@@ -79,8 +79,8 @@ function patch(req, res) {
     fields.email = email;
   }
   if (role !== undefined) {
-    fields.role = role
-  };
+    fields.role = role;
+  }
 
   const updated = store.update(req.params.id, fields);
   res.json({ success: true, data: updated });
