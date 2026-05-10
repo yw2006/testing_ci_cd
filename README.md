@@ -1,4 +1,4 @@
-# Node.js CRUD API — CI/CD Pipeline Test Application
+# Node.js CRUD API — CI/CD Pipeline Test App
 
 A minimal but complete **Express REST API** for managing users.  
 Designed to exercise every stage of the CI/CD pipeline.
