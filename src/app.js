@@ -34,7 +34,6 @@ app.use((_req, res) => {
 });
 
 // ── Global error handler ──────────────────────────────────────────────────────
-// eslint-disable-next-line no-unused-vars
 app.use((err, _req, res, _next) => {
   console.error(err.stack);
   res.status(500).json({ success: false, message: "Internal server error." });
