@@ -1,0 +1,14 @@
+# railway.toml — Railway source deployment (no Docker required)
+# Railway auto-detects Node.js via package.json and runs npm ci + npm start
+# Docs: https://docs.railway.app/reference/config-as-code
+
+[build]
+# Let Railway's Nixpacks builder handle everything automatically
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/health"
+healthcheckTimeout = 30       # seconds to wait for /health to respond
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
